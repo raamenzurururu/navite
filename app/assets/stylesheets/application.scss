@@ -1,0 +1,41 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "tasks";
+
+body{ 
+  padding-top: 100px; 
+}
+
+.logo-img {
+  background-image: image-url("jins.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 500px;
+  background-size: 160px;
+  background-size: 180px!important;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.navbar {
+  color: white;
+}
+
+.fas {
+  color: yellow;
+}
+
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 100px 75px 100px;
+  display: block;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
