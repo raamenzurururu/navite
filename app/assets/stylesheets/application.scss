@@ -7,15 +7,8 @@ body{
   padding-top: 100px; 
 }
 
-.logo-img {
-  background-image: image-url("jins.png");
-  background-repeat: no-repeat;
-  height: 100px;
-  width: 500px;
-  background-size: 160px;
-  background-size: 180px!important;
-  margin: 0 auto;
-  max-width: 50%;
+.navbar-light .navbar-text {
+  color: white;
 }
 
 .navbar {
@@ -24,6 +17,15 @@ body{
 
 .fas {
   color: yellow;
+}
+
+.img-fluid {
+  background-image: image-url("english.png");
+  background-repeat: no-repeat;
+  background-size: 570px;
+  background-size: 570px!important;
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .main {

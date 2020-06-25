@@ -1,11 +1,7 @@
-h1 質問一覧　
-
+h1 フレーズ一覧
 = search_form_for @q, class: 'mb-5' do |f|
-  .form-inline.form-row
-    = f.label :name_cont, '英単語で検索', class: 'form-group.col-sm-6s'
-    .text-center
-      = f.search_field :name_cont, class: 'form-control'
-  .form-inline
+    = f.label :name_cont, 'Keyword'  
+    = f.search_field :name_cont
     = f.submit class: 'btn btn-outline-dark'  
 
 = link_to '新規登録', new_task_path, class: 'btn btn-outline-dark'

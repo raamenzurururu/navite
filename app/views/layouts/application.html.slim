@@ -3,27 +3,37 @@ html
   head
     title
       | native
+    
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    .application.navbar.navbar-expand-md.bg-dark.p-4.fixed-top
+    .application.navbar.navbar-expand-md.p-3.fixed-top style="background-color:#3366CC;"
       .navbar-brand
-      p
-      | これ英語でなんて言うか知ってる？
-      = icon 'fas', 'crown'
+      h2 native
 
+      nav.navbar.navbar-light
+        span.navbar-text 
+          | 毎日５つのフレーズを覚えよう
+          = icon 'fas', 'crown'
       ul.navbar-nav.ml-auto
         - if current_user
-          li.nav-item= link_to '一覧', tasks_path, class: 'nav-link'
+          li.nav-item= link_to 'Phrases', tasks_path, class: 'nav-link'
           - if current_user.admin?
-            li.nav-item= link_to 'ユーザー', admin_users_path, class: 'nav-link'
-          li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
+            li.nav-item= link_to 'Me', admin_users_path, class: 'nav-link'
+          li.nav-item= link_to 'Bye', logout_path, method: :delete, class: 'nav-link'
         - else
-          li.nav-item= link_to 'login', login_path, class: 'nav-link'
+          li.nav-item= link_to 'ログイン', login_path, class: 'btn btn-info'
       
     .container
       - if flash.notice.present?
         .alert.alert-warning= flash.notice
       = yield
+      script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+      script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+
+
+
