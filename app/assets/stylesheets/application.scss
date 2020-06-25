@@ -28,16 +28,22 @@ body{
   max-width: 50%;
 }
 
+.study {
+  padding-top: 50px;
+}
+
 .main {
-  max-width: 500px;
+  padding-top: 50px;
+  background-color: white;
+  max-width: 570px;
   margin: 0 auto;
   width: 90%;
-  padding: 100px 75px 100px;
   display: block;
   flex: 1;
   flex-basis: auto;
   box-sizing: border-box;
   text-align: center;
 }
+
 
 

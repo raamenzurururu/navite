@@ -1,12 +1,18 @@
-.row.bg-secondary style="height:450px;"
-  .col-sm-6.bg-success
-    | col-sm-6
-  .col-sm-6.bg-info.img-fluid
-    | col-sm-6
-.jumbotron.jumbotron-fluid.bg-white
-  .container.text-center
-    h1.display-4.text-primary
-      | 学習を始めよう！
-    h4 It always seems impossible until it's done.
-    p - Nelseo Mandela -
-    p 何事も成功するまでは不可能に思えるものである。
+.row.bg-secondary style="height:180px;"
+  .col-sm-6.bg-white
+   .container.text-center
+      h1.display-4.text-primary.study
+        | 学習を始めよう！
+  .col-sm-6.img-fluid.bg-white
+
+.main
+  = form_with scope: :session, local: true do |f|
+      .form-group.text-center
+        = f.label :email, 'メールアドレス'
+        = f.text_field :email, class: 'form-control', id: 'session_email'
+      .form-group
+        = f.label :password, 'パスワード'
+        = f.password_field :password, class: 'form-control', id: 'session_password'
+      = f.submit 'ログインする', class: 'btn btn-primary'
+
+ 
